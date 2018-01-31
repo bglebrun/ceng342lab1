@@ -5,4 +5,4 @@ NET"carryIn" LOC="H14" ; # switch 2
 
 # 2 LED output
 NET"sum" LOC="K12" ; # led 0
-NET"carryOut" LOC="K13" ; # led 0
+NET"carryOut" LOC="P14" ; # led 0

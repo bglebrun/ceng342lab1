@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "C:/Users/Ben L/Labs/Lab1/adderSim_isim_beh.exe" -prj "C:/Users/Ben L/Labs/Lab1/adderSim_beh.prj" "work.adderSim" 
+-intstyle "ise" -incremental -o "C:/Users/7131322/ceng342labs/Lab1/adderSim_isim_beh.exe" -prj "C:/Users/7131322/ceng342labs/Lab1/adderSim_beh.prj" "work.adderSim" 
