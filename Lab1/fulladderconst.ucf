@@ -1,0 +1,8 @@
+# 3 inputs
+NET"a" LOC="F12" ; # switch 0
+NET"b" LOC="G12" ; # switch 1
+NET"carryIn" LOC="H14" ; # switch 2
+
+# 2 LED output
+NET"sum" LOC="K12" ; # led 0
+NET"carryOut" LOC="K13" ; # led 0
