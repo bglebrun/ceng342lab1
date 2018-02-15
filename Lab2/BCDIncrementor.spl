@@ -1,0 +1,5 @@
+[Inputs]
+=bcdin[7:0]=
+[Outputs]
+=bcdout[7:0]=
+[BiDir]

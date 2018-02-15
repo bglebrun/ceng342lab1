@@ -37,7 +37,7 @@ end BCDIncrementor;
 architecture Behavioral of BCDIncrementor is
 
 begin
-	bcdout <= std_logic_vector(unsigned(bcdin(3 downto 0)) + unsigned(1));
-	bcdout (7 downto 4) <= std_logic_vector(unsigned(bcdin(7 downto 4)) + unsigned(1));
+	bcdout (3 downto 0) <= std_logic_vector(signed(bcdin) + 1);
+	bcdout (7 downto 4) <= std_logic_vector(signed("0000" & bcdin(7 downto 4)) + 1);
 end Behavioral;
 
