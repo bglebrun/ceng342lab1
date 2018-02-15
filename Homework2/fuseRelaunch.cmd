@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/Ben L/Ceng342Labs/Homework2/encoderIfTestbench_isim_beh.exe" -prj "C:/Users/Ben L/Ceng342Labs/Homework2/encoderIfTestbench_beh.prj" "work.encoderIfTestbench" 
