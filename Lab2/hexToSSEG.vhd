@@ -1,11 +1,11 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
+-- Company: South Dakota School of Mines and Technology
+-- Engineer: Benjamin LeBrun
 -- 
 -- Create Date:    13:56:10 02/15/2018 
--- Design Name: 
--- Module Name:    hexToSSEG - Behavioral 
--- Project Name: 
+-- Design Name: 	 BCD incrementor to SSEG
+-- Module Name:    BCDIncrementor - Behavioral 
+-- Project Name: 	 Lab 2
 -- Target Devices: 
 -- Tool versions: 
 -- Description: 
@@ -13,21 +13,12 @@
 -- Dependencies: 
 --
 -- Revision: 
--- Revision 0.01 - File Created
+-- Revision 0.9 - Full history at https://github.com/bglebrun/ceng342labs
 -- Additional Comments: 
 --
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx primitives in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity hexToSSEG is
     Port ( hex : in STD_LOGIC_VECTOR(3 downto 0);
