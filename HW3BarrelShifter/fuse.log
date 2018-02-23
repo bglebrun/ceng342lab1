@@ -1,0 +1,23 @@
+Running: B:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/Ben L/Ceng342Labs/HW3BarrelShifter/ShifterTestBench_isim_beh.exe -prj C:/Users/Ben L/Ceng342Labs/HW3BarrelShifter/ShifterTestBench_beh.prj work.ShifterTestBench 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/Ben L/Ceng342Labs/HW3BarrelShifter/rotate_right_eightbit.vhd" into library work
+Parsing VHDL file "C:/Users/Ben L/Ceng342Labs/HW3BarrelShifter/rotate_left_eightbit.vhd" into library work
+Parsing VHDL file "C:/Users/Ben L/Ceng342Labs/HW3BarrelShifter/multi_function_shifter.vhd" into library work
+Parsing VHDL file "C:/Users/Ben L/Ceng342Labs/HW3BarrelShifter/ShifterTestBench.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling architecture rot_ckt of entity rotate_left_eightbit [rotate_left_eightbit_default]
+Compiling architecture rot_ckt of entity rotate_right_eightbit [rotate_right_eightbit_default]
+Compiling architecture behavioral of entity multi_function_shifter [multi_function_shifter_default]
+Compiling architecture behavior of entity shiftertestbench
+Time Resolution for simulation is 1ps.
+Compiled 10 VHDL Units
+Built simulation executable C:/Users/Ben L/Ceng342Labs/HW3BarrelShifter/ShifterTestBench_isim_beh.exe
+Fuse Memory Usage: 35816 KB
+Fuse CPU Usage: 389 ms
