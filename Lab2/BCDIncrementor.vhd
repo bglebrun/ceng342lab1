@@ -30,9 +30,13 @@ architecture Behavioral of BCDIncrementor is
 
 begin
 	bcdout (3 downto 0) <= "0000" when (signed("0000" & bcdin(3 downto 0)) = 9) else
-		std_logic_vector(signed(bcdin(3 downto 0)) + 1);
+			bcdin(3 downto 0)
+		when (signed("0000" & bcdin(3 downto 0)) > 9) else
+			std_logic_vector(signed(bcdin(3 downto 0)) + 1);
 	
-	bcdout (7 downto 4) <= std_logic_vector(signed(bcdin(7 downto 4)) + 1)
-		when ( signed("0000" & bcdin(3 downto 0)) >= 9) else bcdin(7 downto 4);
+	bcdout (7 downto 4) <= "0000" when ( bcdin = "10011001") else
+			std_logic_vector(signed(bcdin(7 downto 4)) + 1)
+		when ( signed("0000" & bcdin(3 downto 0)) = 9) else
+			bcdin(7 downto 4);
 end Behavioral;
 
