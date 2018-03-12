@@ -13,7 +13,7 @@
 -- Dependencies: 
 --
 -- Revision: 
--- Revision 0.9
+-- Revision 0.9 - Full history: https://github.com/bglebrun/ceng342labs/
 -- Additional Comments: 
 --
 ----------------------------------------------------------------------------------
