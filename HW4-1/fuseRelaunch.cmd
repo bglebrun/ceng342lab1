@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/Ben L/Ceng342Labs/HW4-1/counter_test_bench_isim_beh.exe" -prj "C:/Users/Ben L/Ceng342Labs/HW4-1/counter_test_bench_beh.prj" "work.counter_test_bench" 
