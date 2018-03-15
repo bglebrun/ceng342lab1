@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/Ben L/Ceng342Labs/HW4-2/gray_test_isim_beh.exe" -prj "C:/Users/Ben L/Ceng342Labs/HW4-2/gray_test_beh.prj" "work.gray_test" 
