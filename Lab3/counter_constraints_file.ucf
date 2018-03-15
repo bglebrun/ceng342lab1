@@ -1,0 +1,16 @@
+# input constraints
+NET "reset" LOC="M13";
+NET "pause" LOC="M14";
+NET "clk" LOC = "T9";
+#NET "clk" LOC = "L13";
+
+# output constraints
+NET "cout<0>" LOC="K12";
+NET "cout<1>" LOC="P14";
+NET "cout<2>" LOC="L12";
+NET "cout<3>" LOC="N14";
+NET "max_tick" LOC="P11";
+
+#SPARTAN 3 CLOCK
+#NET "CLK" TNM_NET = "clk";
+#TIMESPEC "TS_clk" = PERIOD "clk" 20 ns HIGH 50 %;
