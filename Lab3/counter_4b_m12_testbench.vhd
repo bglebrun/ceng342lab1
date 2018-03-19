@@ -1,9 +1,9 @@
 --------------------------------------------------------------------------------
--- Company: 
--- Engineer:
+-- Company: South Dakota School of Mines and Technology
+-- Engineer: Benjmain LeBrun
 --
 -- Create Date:   20:45:42 03/14/2018
--- Design Name:   
+-- Design Name:   4-bit mod-12 counter test bench
 -- Module Name:   C:/Users/Ben L/Ceng342Labs/Lab3/counter_4b_m12_testbench.vhd
 -- Project Name:  Lab3
 -- Target Device:  
@@ -15,7 +15,7 @@
 -- Dependencies:
 -- 
 -- Revision:
--- Revision 0.01 - File Created
+-- Revision 0.9
 -- Additional Comments:
 --
 -- Notes: 
@@ -107,8 +107,6 @@ BEGIN
       wait for 100 ns;	
 
       wait for clk_period*10;
-
-      -- insert stimulus here 
 
       wait;
    end process;

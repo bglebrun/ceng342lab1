@@ -1,11 +1,11 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
+-- Company: South Dakota School of Mines and Technology
+-- Engineer: Benjmain LeBrun
 -- 
 -- Create Date:    20:26:59 03/14/2018 
--- Design Name: 
+-- Design Name: 	 4-bit mod-12 counter register
 -- Module Name:    counter_4b_mod_12 - Behavioral 
--- Project Name: 
+-- Project Name:	 Lab 3
 -- Target Devices: 
 -- Tool versions: 
 -- Description: 
@@ -13,7 +13,7 @@
 -- Dependencies: 
 --
 -- Revision: 
--- Revision 0.01 - File Created
+-- Revision 0.09
 -- Additional Comments: 
 --
 ----------------------------------------------------------------------------------
