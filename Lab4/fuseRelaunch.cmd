@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/Ben L/Ceng342Labs/Lab4/default_timer_testbench_isim_beh.exe" -prj "C:/Users/Ben L/Ceng342Labs/Lab4/default_timer_testbench_beh.prj" "work.default_timer_testbench" 
