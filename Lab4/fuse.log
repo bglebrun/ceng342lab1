@@ -13,7 +13,8 @@ Compiling package numeric_std
 Compiling architecture arch of entity stopwatch [stopwatch_default]
 Compiling architecture behavior of entity default_timer_testbench
 Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
 Compiled 6 VHDL Units
 Built simulation executable C:/Users/Ben L/Ceng342Labs/Lab4/default_timer_testbench_isim_beh.exe
-Fuse Memory Usage: 35180 KB
-Fuse CPU Usage: 343 ms
+Fuse Memory Usage: 35808 KB
+Fuse CPU Usage: 484 ms

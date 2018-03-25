@@ -2,14 +2,14 @@ Command line:
    default_timer_testbench_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  43944
+     -socket  46487
 
-Sun Mar 25 13:00:54 2018
+Sun Mar 25 13:28:51 2018
 
 
  Elaboration Time: 0.03125 sec
 
- Current Memory Usage: 1034.69 Meg
+ Current Memory Usage: 1034.73 Meg
 
  Total Signals          : 21
  Total Nets             : 86
@@ -21,9 +21,9 @@ Sun Mar 25 13:00:54 2018
  Total Scalar Nets and Variables : 571
 Total Line Count : 38
 
- Total Simulation Time: 0.078125 sec
+ Total Simulation Time: 0.0625 sec
 
- Current Memory Usage: 1034.69 Meg
+ Current Memory Usage: 1034.73 Meg
 
-Sun Mar 25 13:01:24 2018
+Sun Mar 25 13:29:02 2018
 

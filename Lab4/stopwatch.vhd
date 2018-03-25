@@ -1,20 +1,20 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date:    12:32:22 03/25/2018 
--- Design Name: 
--- Module Name:    stopwatch - arch 
--- Project Name: 
--- Target Devices: 
--- Tool versions: 
--- Description: 
+-- Company:
+-- Engineer:
 --
--- Dependencies: 
+-- Create Date:    12:32:22 03/25/2018
+-- Design Name:
+-- Module Name:    stopwatch - arch
+-- Project Name:
+-- Target Devices:
+-- Tool versions:
+-- Description:
 --
--- Revision: 
+-- Dependencies:
+--
+-- Revision:
 -- Revision 0.01 - File Created
--- Additional Comments: 
+-- Additional Comments:
 --
 ----------------------------------------------------------------------------------
 library IEEE;
@@ -29,9 +29,9 @@ end stopwatch;
 
 architecture arch of stopwatch is
 	constant DVSR: integer:=5000000;
-	signal ms_reg, ms_next: unsigned(22 downto 0);
-	signal d2_reg, d1_reg, d0_reg: unsigned(3 downto 0);
-	signal d2_next, d1_next, d0_next: unsigned(3 downto 0);
+	signal ms_reg, ms_next: unsigned(22 downto 0):="00000000000000000000000";
+	signal d2_reg, d1_reg, d0_reg: unsigned(3 downto 0):="0000";
+	signal d2_next, d1_next, d0_next: unsigned(3 downto 0):="0000";
 	signal ms_tick: std_logic;
 begin
 	-- reg
@@ -44,13 +44,13 @@ begin
 			d0_reg<=d0_next;
 		end if;
 	end process;
-	
+
 	-- next-state
 	ms_next<=(others=>'0') when clr='1' or (ms_reg=DVSR and go='1') else
 		ms_reg + 1 when go='1' else
 		ms_reg;
 	ms_tick<='1' when ms_reg=DVSR else '0';
-	
+
 	-- 3 dig inc
 	process(d0_reg,d1_reg,d2_reg,ms_tick,clr)
 	begin
@@ -63,7 +63,7 @@ begin
 			d1_next<="0000";
 			d2_next<="0000";
 		elsif ms_tick='1' then
-			if(d0_reg/=9)then
+			if(d0_reg/=9) then
 				d0_next<=d0_reg+1;
 			else 	--XX9
 				d0_next<="0000";
@@ -80,7 +80,7 @@ begin
 			end if;
 		end if;
 	end process;
-	
+
 	-- output
 	d0 <= std_logic_vector(d0_reg);
 	d1 <= std_logic_vector(d1_reg);
