@@ -32,16 +32,16 @@ architecture Behavioral of minute_stop_watch_lcd is
   signal s3, s2, s1, s0: std_logic_vector(7 downto 0);
 begin
   sseg_0: entity work.hex_to_sseg(ds_arch)
-  port map(hex=>d0, sseg=>s0);
+  port map(hex=>d0, dp=>'1', sseg=>s0);
 
   sseg_1: entity work.hex_to_sseg(ds_arch)
-  port map(hex=>d1, sseg=>s1);
+  port map(hex=>d1, dp=>'0', sseg=>s1);
 
   sseg_2: entity work.hex_to_sseg(ds_arch)
-  port map(hex=>d2, sseg=>s2);
+  port map(hex=>d2, dp=>'1', sseg=>s2);
 
   sseg_3: entity work.hex_to_sseg(ds_arch)
-  port map(hex=>d3, sseg=>s3);
+  port map(hex=>d3, dp=>'0', sseg=>s3);
 
   disp_unit: entity work.disp_mux(arch)
   port map(

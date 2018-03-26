@@ -22,6 +22,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity hex_to_sseg is
     Port ( hex : in STD_LOGIC_VECTOR(3 downto 0);
+           dp : in STD_LOGIC;
            sseg : out  STD_LOGIC_VECTOR(7 downto 0));
 end hex_to_sseg;
 
@@ -42,5 +43,5 @@ begin
     "0000100" when "1001",
     "0111000" when others; --f
 
-  sseg(7) <= '1' when (unsigned(hex)>0) else '0';
+  sseg(7) <= dp;
 end ds_arch;
