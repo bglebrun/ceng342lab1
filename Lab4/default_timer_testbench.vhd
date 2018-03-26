@@ -44,9 +44,10 @@ ARCHITECTURE behavior OF default_timer_testbench IS
          clk : IN  std_logic;
          go : IN  std_logic;
          clr : IN  std_logic;
-         d2 : OUT  std_logic_vector(3 downto 0);
-         d1 : OUT  std_logic_vector(3 downto 0);
-         d0 : OUT  std_logic_vector(3 downto 0)
+         signal m : std_logic_vector(3 downto 0);
+         signal s1 : std_logic_vector(3 downto 0);
+         signal s0 : std_logic_vector(3 downto 0);
+         signal d : std_logic_vector(3 downto 0)
         );
     END COMPONENT;
 
@@ -57,9 +58,10 @@ ARCHITECTURE behavior OF default_timer_testbench IS
    signal clr : std_logic := '0';
 
  	--Outputs
-   signal d2 : std_logic_vector(3 downto 0);
-   signal d1 : std_logic_vector(3 downto 0);
-   signal d0 : std_logic_vector(3 downto 0);
+   signal m : std_logic_vector(3 downto 0);
+   signal s1 : std_logic_vector(3 downto 0);
+   signal s0 : std_logic_vector(3 downto 0);
+   signal d : std_logic_vector(3 downto 0);
 
    -- Clock period definitions
    constant clk_period : time := 10 ns;
@@ -71,9 +73,10 @@ BEGIN
           clk => clk,
           go => go,
           clr => clr,
-          d2 => d2,
-          d1 => d1,
-          d0 => d0
+          m => m,
+          s0 => s0,
+          s1 => s0,
+          d => d
         );
 
    -- Clock process definitions
@@ -101,8 +104,9 @@ BEGIN
 
 		wait for 10 ns;
 		go<='1';
-
-      wait;
+    --wait for 15 ns;
+    --go<='0';
+    wait;
    end process;
 
 END;

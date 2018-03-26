@@ -182,7 +182,7 @@ LAB16:    xsi_set_current_line(103, ng0);
     t8 = *((char **)t7);
     *((unsigned char *)t8) = (unsigned char)3;
     xsi_driver_first_trans_fast(t2);
-    xsi_set_current_line(105, ng0);
+    xsi_set_current_line(106, ng0);
 
 LAB22:    *((char **)t1) = &&LAB23;
     goto LAB1;
