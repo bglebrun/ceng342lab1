@@ -1,11 +1,11 @@
 ----------------------------------------------------------------------------------
--- Company:
--- Engineer:
+-- Company: South Dakota School of Mines and Technology
+-- Engineer: Benjamin LeBrun
 --
 -- Create Date:    12:32:22 03/25/2018
--- Design Name:
+-- Design Name:   stopwatch-main
 -- Module Name:    stopwatch - arch
--- Project Name:
+-- Project Name:  Lab 4
 -- Target Devices:
 -- Tool versions:
 -- Description:
@@ -13,7 +13,7 @@
 -- Dependencies:
 --
 -- Revision:
--- Revision 0.01 - File Created
+-- Revision 0.9
 -- Additional Comments:
 --
 ----------------------------------------------------------------------------------

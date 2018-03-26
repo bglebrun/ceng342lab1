@@ -1,11 +1,11 @@
 ----------------------------------------------------------------------------------
--- Company:
--- Engineer:
+-- Company: South Dakota School of Mines and Technology
+-- Engineer: Benjamin LeBrun
 --
 -- Create Date:    18:04:26 03/25/2018
--- Design Name:
+-- Design Name:   Stopwatch with lcd top level
 -- Module Name:    minute_stop_watch_lcd - Behavioral
--- Project Name:
+-- Project Name:  Lab 4
 -- Target Devices:
 -- Tool versions:
 -- Description:
@@ -13,7 +13,7 @@
 -- Dependencies:
 --
 -- Revision:
--- Revision 0.01 - File Created
+-- Revision 0.09
 -- Additional Comments:
 --
 ----------------------------------------------------------------------------------
