@@ -1,11 +1,11 @@
 ----------------------------------------------------------------------------------
--- Company:
--- Engineer:
+-- Company: South Dakota School of Mines and Technology
+-- Engineer: Benjamin LeBrun
 --
 -- Create Date:    23:36:08 03/27/2018
--- Design Name:
+-- Design Name:   Finite state machine
 -- Module Name:    fininte_state_machine - Behavioral
--- Project Name:
+-- Project Name:   Homework 5 - 1
 -- Target Devices:
 -- Tool versions:
 -- Description:
@@ -13,7 +13,7 @@
 -- Dependencies:
 --
 -- Revision:
--- Revision 0.01 - File Created
+-- Revision 0.9
 -- Additional Comments:
 --
 ----------------------------------------------------------------------------------
@@ -41,7 +41,7 @@ begin
   end process;
 
   --next state/output logic
-  process(state_reg, a,b)
+  process(state_reg, clk, x)
   begin
     state_next<=state_reg;
     y0<='0';
@@ -62,7 +62,9 @@ begin
           state_next<=s1;
         end if;
       when s2=>
-        state_next<=s0;
+        if (clk'event and clk='1') then
+          state_next<=s0;
+        end if;
     end case;
   end process;
 
