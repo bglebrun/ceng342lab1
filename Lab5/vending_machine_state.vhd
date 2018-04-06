@@ -27,7 +27,7 @@ entity vending_machine_state is
 end vending_machine_state;
 
 architecture Behavioral of vending_machine_state is
-  type reg_state_type is (s0, s5, s10, s25, change, dispense);
+  type reg_state_type is (s0, s5, s10, s15, s20, s25, change, dispense);
   signal state_reg, state_next: reg_state_type;
 begin
   -- state register
@@ -48,6 +48,6 @@ begin
     C<='0'; --default 0
 
     -- state logic here
-    
+
   end process;
 end Behavioral;
