@@ -48,6 +48,49 @@ begin
     C<='0'; --default 0
 
     -- state logic here
-
+    if (Q='1' and state_next/=s25 and state_reg/=s25) then
+      state_next<=s25;
+    else
+      case state_reg is
+        when s0=>
+          if N='1' then
+            state_next<=s5;
+          elsif D='1' then
+            state_next<=s10;
+          end if;
+        when s5=>
+          if N='1' then
+            state_next<=s10;
+          elsif D='1' then
+            state_next<=s15;
+          end if;
+        when s10=>
+          if N='1' then
+            state_next<=s15;
+          elsif D='1' then
+            state_next<=s20;
+          end if;
+        when s15=>
+          if N='1' then
+            state_next<=s20;
+          elsif D='1' then
+            state_next<=s25;
+          end if;
+        when s20=>
+          if (N='1' or D='1') then
+            state_next<=s25;
+          else
+            state_next<=dispense;
+          end if;
+        when s25=>
+          state_next<=change;
+        when dispense=>
+          P<='1';
+          state_next<=s0;
+        when change=>
+          C<='1';
+          state_next<=dispense;
+        end case;
+      end if;
   end process;
 end Behavioral;
