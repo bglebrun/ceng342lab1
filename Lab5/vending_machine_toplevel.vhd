@@ -29,6 +29,7 @@ end vending_machine_toplevel;
 architecture Behavioral of vending_machine_toplevel is
   signal N_debounced, D_debounced, Q_debounced: std_logic;
 begin
+
   debounce_N: entity work.input_debounce_filter(arch_filt)
   port map(sw=>N_in, db=>N_debounced, clk=>clk, reset=>reset);
 
