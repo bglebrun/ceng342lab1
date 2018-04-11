@@ -27,11 +27,11 @@ entity one_second_clock is
 end one_second_clock;
 
 architecture osc_arch of one_second_clock is
-  CONSTANT DVSR: integer:=5000000;
-  signal ms_count, ms_count_next: unsigned(15 downto 0):="0000000000000000";
+  CONSTANT DVSR: integer:=50000 ;
   signal ms_reg, ms_next: unsigned(22 downto 0) := "00000000000000000000000";
-  signal ms_tick: std_logic;
+  signal ms_count, ms_count_next: unsigned(15 downto 0):="0000000000000000";
   signal s_reg, s_reg_next: std_logic := '0';
+  signal ms_tick: std_logic;
 begin
   --register
   process(clk)
