@@ -1,20 +1,26 @@
-Running: B:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/Ben L/Ceng342Labs/Lab5/clock_test_isim_beh.exe -prj C:/Users/Ben L/Ceng342Labs/Lab5/clock_test_beh.prj work.clock_test 
-ISim P.20131013 (signature 0x7708f090)
-Number of CPUs detected in this system: 8
-Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/7131322/ceng342labs/Lab5/top_level_test_isim_beh.exe -prj C:/Users/7131322/ceng342labs/Lab5/top_level_test_beh.prj work.top_level_test 
+ISim P.20131013 (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Parsing VHDL file "C:/Users/Ben L/Ceng342Labs/Lab5/one_second_clock.vhd" into library work
-Parsing VHDL file "C:/Users/Ben L/Ceng342Labs/Lab5/clock_test.vhd" into library work
+Parsing VHDL file "C:/Users/7131322/ceng342labs/Lab5/vending_machine_state.vhd" into library work
+Parsing VHDL file "C:/Users/7131322/ceng342labs/Lab5/one_second_clock.vhd" into library work
+Parsing VHDL file "C:/Users/7131322/ceng342labs/Lab5/vending_machine_toplevel.vhd" into library work
+Parsing VHDL file "C:/Users/7131322/ceng342labs/Lab5/top_level_test.vhd" into library work
 Starting static elaboration
 Completed static elaboration
+Fuse Memory Usage: 193284 KB
+Fuse CPU Usage: 1187 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
 Compiling architecture osc_arch of entity one_second_clock [one_second_clock_default]
-Compiling architecture behavior of entity clock_test
+Compiling architecture fsm_arch of entity vending_machine_state [vending_machine_state_default]
+Compiling architecture behavioral of entity vending_machine_toplevel [vending_machine_toplevel_default]
+Compiling architecture behavior of entity top_level_test
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
-Compiled 6 VHDL Units
-Built simulation executable C:/Users/Ben L/Ceng342Labs/Lab5/clock_test_isim_beh.exe
-Fuse Memory Usage: 35076 KB
-Fuse CPU Usage: 437 ms
+Compiled 10 VHDL Units
+Built simulation executable C:/Users/7131322/ceng342labs/Lab5/top_level_test_isim_beh.exe
+Fuse Memory Usage: 208740 KB
+Fuse CPU Usage: 1686 ms

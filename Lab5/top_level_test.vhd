@@ -89,6 +89,18 @@ BEGIN
       wait for clk_period*10;
 
       -- insert stimulus here
+      wait for 100000000 ns;
+      btn(0)<='1';
+      wait for 10 ns;
+      btn(0)<='0';
+
+      btn(1)<='1';
+      wait for 10 ns;
+      btn(0)<='0';
+
+      btn(1)<='1';
+      wait for 10 ns;
+      btn(0)<='0';
 
       wait;
    end process;

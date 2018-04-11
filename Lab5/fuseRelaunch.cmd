@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "C:/Users/Ben L/Ceng342Labs/Lab5/clock_test_isim_beh.exe" -prj "C:/Users/Ben L/Ceng342Labs/Lab5/clock_test_beh.prj" "work.clock_test" 
+-intstyle "ise" -incremental -o "C:/Users/7131322/ceng342labs/Lab5/top_level_test_isim_beh.exe" -prj "C:/Users/7131322/ceng342labs/Lab5/top_level_test_beh.prj" "work.top_level_test" 
