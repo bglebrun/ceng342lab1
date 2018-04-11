@@ -27,7 +27,7 @@ entity vending_machine_toplevel is
 end vending_machine_toplevel;
 
 architecture Behavioral of vending_machine_toplevel is
-  --signal N_debounced, D_debounced, Q_debounced: std_logic;
+  signal N_debounced, D_debounced, Q_debounced: std_logic;
   signal N_in, D_in, Q_in: std_logic;
   signal P_out, C_out: std_logic;
   signal s_clk: std_logic;
@@ -40,22 +40,22 @@ begin
   slow_down_bucko: entity work.one_second_clock(osc_arch)
   port map(reset=>reset, clk=>clk, s_tick=>s_clk);
 
---  debounce_N: entity work.input_debounce_filter(arch_filt)
---  port map(sw=>N_in, db=>N_debounced, clk=>s_clk, reset=>reset);
---
---  debounce_D: entity work.input_debounce_filter(arch_filt)
---  port map(sw=>D_in, db=>D_debounced, clk=>s_clk, reset=>reset);
---
---  debounce_Q: entity work.input_debounce_filter(arch_filt)
---  port map(sw=>Q_in, db=>Q_debounced, clk=>s_clk, reset=>reset);
---
---  fsm_implementation: entity work.vending_machine_state(fsm_arch)
---  port map(N=>N_debounced, D=>D_debounced, Q=>Q_debounced,
---          P=>P_out, C=>C_out, clk=>s_clk, reset=>reset);
+  debounce_N: entity work.input_debounce_filter(arch_filt)
+  port map(sw=>N_in, db=>N_debounced, clk=>s_clk, reset=>reset);
 
-    fsm_implementation: entity work.vending_machine_state(fsm_arch)
-    port map(N=>N_in, D=>D_in, Q=>Q_in,
-        P=>P_out, C=>C_out, clk=>s_clk, reset=>reset);
+  debounce_D: entity work.input_debounce_filter(arch_filt)
+  port map(sw=>D_in, db=>D_debounced, clk=>s_clk, reset=>reset);
+
+  debounce_Q: entity work.input_debounce_filter(arch_filt)
+  port map(sw=>Q_in, db=>Q_debounced, clk=>s_clk, reset=>reset);
+
+  fsm_implementation: entity work.vending_machine_state(fsm_arch)
+  port map(N=>N_debounced, D=>D_debounced, Q=>Q_debounced,
+          P=>P_out, C=>C_out, clk=>s_clk, reset=>reset);
+
+  --  fsm_implementation: entity work.vending_machine_state(fsm_arch)
+  --  port map(N=>N_in, D=>D_in, Q=>Q_in,
+  --      P=>P_out, C=>C_out, clk=>s_clk, reset=>reset);
 
   -- outputs
   led(0)<=P_out;
