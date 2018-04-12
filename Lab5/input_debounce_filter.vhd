@@ -1,11 +1,11 @@
 ----------------------------------------------------------------------------------
--- Company:
--- Engineer:
+-- Company: South Dakota School of Mines and Technology
+-- Engineer: Benjamin LeBrun
 --
 -- Create Date:    14:42:52 04/08/2018
--- Design Name:
+-- Design Name:	 Input debounce filter
 -- Module Name:    input_debounce_filter - arch_filt
--- Project Name:
+-- Project Name:	 Lab 5: Vending Machine
 -- Target Devices:
 -- Tool versions:
 -- Description:

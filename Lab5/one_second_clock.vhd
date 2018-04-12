@@ -1,11 +1,11 @@
 ----------------------------------------------------------------------------------
--- Company:
--- Engineer:
+-- Company: South Dakota School of Mines and Technology
+-- Engineer: Benjamin LeBrun
 --
 -- Create Date:    09:47:56 04/10/2018
--- Design Name:
+-- Design Name:	 1 Hz clock
 -- Module Name:    one_second_clock - Behavioral
--- Project Name:
+-- Project Name:	 Lab 5 Vending Machine
 -- Target Devices:
 -- Tool versions:
 -- Description:
