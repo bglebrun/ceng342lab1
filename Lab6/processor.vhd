@@ -1,11 +1,11 @@
 ----------------------------------------------------------------------------------
--- Company:
--- Engineer:
+-- Company:        South Dakota School of Mines and Technology
+-- Engineer:       Benjamin LeBrun
 --
 -- Create Date:    02:13:53 04/26/2018
--- Design Name:
+-- Design Name:    MIPS Processor/IO layer
 -- Module Name:    processor - mips_arch
--- Project Name:
+-- Project Name:   Lab 6 - MIPS processor
 -- Target Devices:
 -- Tool versions:
 -- Description:
@@ -13,8 +13,11 @@
 -- Dependencies:
 --
 -- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
+-- Revision 0.8 - WD40 and Ducktape edition
+-- Additional Comments: IO used to have it's own entity and file, however,
+-- issues with port interfaces and exessive number of signals needed to implement
+-- this design properly and the number of warnings it causes anyway means this
+-- monstrosity gets parked here, 2 hours before submission deadline.
 --
 ----------------------------------------------------------------------------------
 library IEEE;

@@ -1,11 +1,11 @@
 ----------------------------------------------------------------------------------
--- Company:
--- Engineer:
+-- Company:        South Dakota School of Mines and Technology
+-- Engineer:       Benjamin LeBrun
 --
 -- Create Date:    02:01:14 04/26/2018
--- Design Name:
+-- Design Name:    Arithmetic Logic Unit
 -- Module Name:    arith_logic_unit - proc_arch
--- Project Name:
+-- Project Name:   Lab 6 - MIPS Processor
 -- Target Devices:
 -- Tool versions:
 -- Description:
@@ -13,8 +13,8 @@
 -- Dependencies:
 --
 -- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
+-- Revision 0.8
+-- Additional Comments: Easiest reg in the entire project
 --
 ----------------------------------------------------------------------------------
 library IEEE;

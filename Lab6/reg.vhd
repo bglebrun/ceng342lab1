@@ -1,11 +1,11 @@
 ----------------------------------------------------------------------------------
--- Company:
--- Engineer:
+-- Company:        South Dakota School of Mines and Technology
+-- Engineer:       Benjamin LeBrun
 --
 -- Create Date:    01:30:51 04/26/2018
--- Design Name:
+-- Design Name:    MIPS Memory and Reg IO
 -- Module Name:    reg - reg_arch
--- Project Name:
+-- Project Name:   Lab 6 - MIPS Processor
 -- Target Devices:
 -- Tool versions:
 -- Description:
@@ -13,7 +13,7 @@
 -- Dependencies:
 --
 -- Revision:
--- Revision 0.01 - File Created
+-- Revision 0.8
 -- Additional Comments:
 --
 ----------------------------------------------------------------------------------
