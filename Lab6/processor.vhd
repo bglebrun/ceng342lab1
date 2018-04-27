@@ -22,8 +22,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
 entity processor is
-    Port ( clk, reset : in  STD_LOGIC;
-           btn : in  STD_LOGIC_VECTOR(3 downto 0);
+    Port ( clk, reset, btn : in  STD_LOGIC;
+           -- btn : in  STD_LOGIC_VECTOR(3 downto 0);
            sw : in  STD_LOGIC_VECTOR(7 downto 0);
            led : out  STD_LOGIC_VECTOR(7 downto 0));
 end processor;
@@ -44,7 +44,7 @@ begin
   op<=instruction(2 downto 0);
 
   debounce_filter : entity work.input_debounce_filter(arch_filt)
-  port map(clk=>clk, reset=>reset, sw=>btn(1), db=>btn_debounce);
+  port map(clk=>clk, reset=>reset, sw=>btn, db=>btn_debounce);
 
   alu_unit : entity work.arith_logic_unit(proc_arch)
   port map(op=>op, reg1=>reg2, reg2=>reg3, res=>reg1);
@@ -58,4 +58,5 @@ begin
   port map(clk=>clk, reset=>reset, btn_debounce=>btn_debounce, sw=>sw,
   instructions=>instruction, reg2=>reg2, reg3=>reg3, write_to_reg=>reg_write,
   output_reg=>read_head,led=>led);
+  
 end mips_arch;

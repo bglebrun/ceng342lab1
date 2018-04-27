@@ -24,7 +24,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity reg is
     Port ( clk, reset : in  STD_LOGIC;
            write_reg: in  STD_LOGIC;
-           ad1, ad2 : in STD_LOGIC_VECTOR(5 downto 0);
+           ad1, ad2 : in STD_LOGIC_VECTOR(4 downto 0);
            write_add, read_add : in  STD_LOGIC_VECTOR(4 downto 0);
            data : in  STD_LOGIC_VECTOR(31 downto 0);
            reg1, reg2, read_reg : out  STD_LOGIC_VECTOR(31 downto 0));
@@ -35,7 +35,7 @@ architecture reg_arch of reg is
   signal mem : reg_mem;
 begin
   -- reg
-  process(clk, reset)
+  process(clk, reset, mem)
   begin
     --write
     if (reset='1') then

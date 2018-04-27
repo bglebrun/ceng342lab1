@@ -36,10 +36,17 @@ begin
   an <= reg1 and reg2;
   o <= reg1 or reg2;
 
-  -- output
-  res <= add when (op="000") else
-    sub when (op="010") else
-    an when (op="100") else
-    o when (op="100");
-
+  process(op, add, sub, an, o)
+  begin
+    if (op="000") then
+      res<=add;
+    elsif (op="010") then
+      res<=sub;
+    elsif (op="100") then
+      res<=an;
+    elsif (op="101") then
+      res<=o;
+    else res<=(others=>'0');
+    end if;
+  end process;
 end proc_arch;

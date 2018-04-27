@@ -52,7 +52,8 @@ begin
     branch_to<=unsigned("00000000000000"&instructions(15 downto 0)&"00")
       + prog_count + 4;
 
-    process(reg_state)
+    process(reg_state, btn_debounce, instructions, reg2, reg3, prog_count,
+      branch_to, output_reg, sw)
     begin
       --defaults
       reg_next<=reg_state;
