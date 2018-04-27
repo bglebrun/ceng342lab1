@@ -24,8 +24,8 @@ use IEEE.NUMERIC_STD.ALL;
 entity reg is
     Port ( clk, reset : in  STD_LOGIC;
            write_reg: in  STD_LOGIC;
-           ad1, ad2 : in STD_LOGIC_VECTOR(4 downto 0);
-           write_add, read_add : in  STD_LOGIC_VECTOR(4 downto 0);
+           addr1, addr2 : in STD_LOGIC_VECTOR(4 downto 0);
+           write_addr, read_addr : in  STD_LOGIC_VECTOR(4 downto 0);
            data : in  STD_LOGIC_VECTOR(31 downto 0);
            reg1, reg2, read_reg : out  STD_LOGIC_VECTOR(31 downto 0));
 end reg;
@@ -42,13 +42,13 @@ begin
       mem <=(others=>(others=>'0'));
     elsif(clk'event and clk='1') then
       if(write_reg='1') then
-        mem(to_integer(unsigned(write_add))) <= data;
+        mem(to_integer(unsigned(write_addr))) <= data;
       end if;
     end if;
 
     --read
-    reg1<=mem(to_integer(unsigned(ad1)));
-    reg2<=mem(to_integer(unsigned(ad2)));
-    read_reg<=mem(to_integer(unsigned(read_add)));
+    reg1<=mem(to_integer(unsigned(addr1)));
+    reg2<=mem(to_integer(unsigned(addr2)));
+    read_reg<=mem(to_integer(unsigned(read_addr)));
   end process;
 end reg_arch;

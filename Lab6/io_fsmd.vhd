@@ -25,10 +25,11 @@ entity io_fsmd is
     Port ( clk, reset : in  STD_LOGIC;
            btn_debounce : in  STD_LOGIC;
            sw : in  STD_LOGIC_VECTOR(7 downto 0);
-           output_reg, reg2, reg3 : in  STD_LOGIC_VECTOR(31 downto 0);
-           write_to_reg: out STD_LOGIC;
+           reg2, reg3 : in  STD_LOGIC_VECTOR(31 downto 0);
            instructions: inout STD_LOGIC_VECTOR(31 downto 0);
-           led : out  STD_LOGIC_VECTOR(7 downto 0));
+           write_to_reg: out STD_LOGIC;
+           read_head: out STD_LOGIC_VECTOR(31 downto 0);
+           led: out  STD_LOGIC_VECTOR(7 downto 0));
 end io_fsmd;
 
 architecture fsmd_arch of io_fsmd is
@@ -38,7 +39,14 @@ architecture fsmd_arch of io_fsmd is
   signal reg_state, reg_next : proc_state;
   -- program counter
   signal prog_count, pc_next, branch_to: unsigned(31 downto 0);
+  -- output_reg
+  signal read_reg: std_logic_vector(31 downto 0);
 begin
+
+  read_head<=read_reg when sw(5)='0' else
+    STD_LOGIC_VECTOR(prog_count) when sw(5)='1' else
+    (others=>'0');
+
     process(clk, reset)
     begin
       if(reset='1') then
@@ -53,7 +61,7 @@ begin
       + prog_count + 4;
 
     process(reg_state, btn_debounce, instructions, reg2, reg3, prog_count,
-      branch_to, output_reg, sw)
+      branch_to, sw)
     begin
       --defaults
       reg_next<=reg_state;
@@ -76,42 +84,42 @@ begin
         when out1=>
           if(btn_debounce='1') then
             reg_next<=out1_p;
-          else led<=output_reg(31 downto 24);
+          else led<=read_reg(31 downto 24);
           end if;
         when out1_p=>
           if(btn_debounce='0') then
             reg_next<=out2;
-          else led<=output_reg(31 downto 24);
+          else led<=read_reg(31 downto 24);
           end if;
         when out2=>
           if(btn_debounce='1') then
             reg_next<=out2_p;
-          else led<=output_reg(23 downto 16);
+          else led<=read_reg(23 downto 16);
           end if;
         when out2_p=>
           if(btn_debounce='0') then
             reg_next<=out3;
-          else led<=output_reg(23 downto 16);
+          else led<=read_reg(23 downto 16);
           end if;
         when out3=>
           if(btn_debounce='1') then
             reg_next<=out3_p;
-          else led<=output_reg(15 downto 8);
+          else led<=read_reg(15 downto 8);
           end if;
         when out3_p=>
           if(btn_debounce='0') then
             reg_next<=out4;
-          else led<=output_reg(15 downto 8);
+          else led<=read_reg(15 downto 8);
           end if;
         when out4=>
           if(btn_debounce='1') then
             reg_next<=out4_p;
-          else led<=output_reg(7 downto 0);
+          else led<=read_reg(7 downto 0);
           end if;
         when out4_p=>
           if(btn_debounce='0') then
             reg_next<=in1;
-          else led<=output_reg(7 downto 0);
+          else led<=read_reg(7 downto 0);
           end if;
 
         -- INPUTS
